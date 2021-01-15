@@ -1,9 +1,271 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+html {
+  background-color: #f1f0f3;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  display: flex;
+}
+
+.playlist-screen,
+.play-screen {
+  width: 360px;
+  height: 750px;
+  margin: 50px 10px;
+  border: solid 1px whitesmoke;
+  border-radius: 40px;
+  background: linear-gradient(#e66465, #9198e5);
+  background-color: white;
+}
+
+.playlist-screen {
+  margin-left: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 85%;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.song {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.song__cover {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+.song__data h2 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.song__data h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  opacity: 0.6;
+}
+
+.song__btn {
+  display: flex;
+  width: 73%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.btn {
+}
+
+.song__shuffle {
+  background-color: #9e888f;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+
+.song__shuffle h3 {
+  font-size: 15px;
+  color: white;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.song__like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  background-color: wheat;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.song__like i {
+  color: tomato;
+  margin-right: 10px;
+}
+
+.song__like h4 {
+  font-weight: 600;
+}
+
+.song-list__song {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 10px;
+  width: 90%;
+}
+
+.song-list__photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.song-list__data h4 {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.song-list__data h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.song-list__playing {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.song-list__song:nth-child(2) {
+  border-radius: 20px;
+}
+
+.song-list__playing img {
+  opacity: 0.6;
+}
+
+.song-list__playing i {
+  position: absolute;
+  padding-right: 10px;
+}
+
+.playing {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #9e888f;
+  padding: 15px 20px;
+  border-radius: 40px;
+  margin-top: 5px;
+}
+
+.playing__data {
+  margin-left: 5px;
+  margin-right: 80px;
+}
+
+.playing__data h2,
+.playing__data h4 {
+  color: white;
+}
+
+.playing__data h4 {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.playing__data h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.playing__btn {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playing__btn i {
+  color: white;
+}
+
+.play-screen header {
+  margin-bottom: 50px;
+}
+
+.play-screen__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.play-screen__cover {
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 10px 0px 0px rgba(197, 102, 170, 0.4);
+}
+
+.play-screen__data h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.play-screen__data h4 {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.play-screen__timer {
+  margin-bottom: 80px;
+}
+
+.play-screen__time {
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+  margin: 20px 6% 10px 6%;
+}
+
+.play-screen__time h6 {
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.play-screen__range {
+  width: 90%;
+  margin: 0px 5%;
+}
+
+.play-screen__action {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.play-screen__action i:first-child,
+.play-screen__action i:last-child {
+  opacity: 0.2;
 }
