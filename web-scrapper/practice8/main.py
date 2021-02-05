@@ -37,7 +37,6 @@ subreddits = [
 ]
 
 
-db = {}
 app = Flask("DayEleven")
 
 
