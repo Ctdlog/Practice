@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
-</head>
+  <head>
+    <title>
+      Reddit Reader
+    </title>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  </head>
 
-<body>
-  
-</body>
+  <body>
+    <header>
+      <h1><a href="/">Reddit Reader</a></h1>
+      <h3>Reading:
+      {% for arg in args %} 
+      r/{{arg}} 
+      {% endfor %}
+      </h3>
+    </header>
+    <main>
+      {% for list in lists %}
+      <div>
+        <h3><a href="{{list.link}}"" target="_blank">{{list.title|safe}}</a></h3>
+        <h4>{{list.votes}} votes ·  {{list.language|safe}}</h4>
+        <hr>
+      </div>
+      {% endfor %}
+    
+    </main>
+    </body>
 
 </html>
+      
